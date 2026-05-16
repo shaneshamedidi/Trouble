@@ -2,14 +2,37 @@
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
-    <title>我的文章網站</title>
+    <title>年齡確認</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 100px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <h1>我的文章網站</h1>
 
-    <ul>
-        <li><a href="article1.html">第一篇：相遇</a></li>
-        <li><a href="article2.html">第二篇：辦公室戀情</a></li>
-    </ul>
+    <h1>請確認是否已滿18歲</h1>
+
+    <button onclick="enterAdult()">我已成年</button>
+    <button onclick="notAdult()">未滿18歲</button>
+
+    <script>
+        function enterAdult() {
+            window.location.href = "home.html";
+        }
+
+        function notAdult() {
+            window.location.href = "block.html";
+        }
+    </script>
+
 </body>
 </html>
