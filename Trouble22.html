@@ -203,8 +203,10 @@ __
 
 </body>
     <script>
+    (function () {
         if (sessionStorage.getItem("allowed") !== "true") {
             window.location.href = "index.html";
         }
-    </script>
+    })();
+</script>
 </html>
