@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>第一篇：相遇</title>
+    <title>第二十二章</title>
 
     <style>
-        /* 背景圖片 */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
 
-            background-image: url("image.jpg");/* 👈 換成你的圖片 */
+            background-image: url("image.jpg");
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -19,7 +18,6 @@
             color: #333;
         }
 
-        /* 黑色透明遮罩（讓文字更清楚） */
         body::before {
             content: "";
             position: fixed;
@@ -27,17 +25,15 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.4); /* 👈 透明度調整 */
+            background: rgba(0, 0, 0, 0.4);
             z-index: 0;
         }
-
-        /* 文章容器 */
         .container {
             position: relative;
             z-index: 1;
             max-width: 800px;
             margin: 60px auto;
-            background: rgba(255, 255, 255, 0.92); /* 👈 半透明白色 */
+            background: rgba(255, 255, 255, 0.92); 
             padding: 40px;
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
@@ -53,30 +49,25 @@
             line-height: 1.8;
             white-space: pre-line;
         }
-
         .top {
             display: flex;
             justify-content: space-between;
             margin-bottom: 20px;
         }
-
         a {
             text-decoration: none;
             color: #555;
             transition: 0.2s;
         }
-
         a:hover {
             color: black;
         }
-
         .btn {
             padding: 6px 12px;
             background: #333;
             color: white;
             border-radius: 8px;
         }
-
         .btn:hover {
             background: #000;
         }
