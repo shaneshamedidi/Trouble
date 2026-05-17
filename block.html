@@ -8,29 +8,41 @@
 <style>
 body {
     margin: 0;
-    background: black;
+    font-family: Arial, sans-serif;
     color: white;
-    text-align: center;
-    font-family: Arial;
+    overflow: hidden;
 }
 
-/* 影片背景 */
-video {
+/* 🎞 GIF 背景 */
+.bg {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
-    z-index: -1;
+    background-image: url("warning.gif"); /* 👈 你的 GIF */
+    background-size: cover;
+    background-position: center;
 }
 
-/* 內容 */
+/* 🌑 黑色遮罩（讓文字清楚） */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.55);
+}
+
+/* 📦 文字內容 */
 .content {
     position: relative;
-    z-index: 1;
-    margin-top: 20vh;
+    text-align: center;
+    top: 35vh;
+    padding: 20px;
 }
 
 h1 {
@@ -39,36 +51,37 @@ h1 {
 
 p {
     color: #ccc;
+    font-size: 16px;
 }
 
-/* 提示 */
+/* ✨ 閃爍提示 */
 .tip {
     margin-top: 20px;
     font-size: 14px;
-    opacity: 0.7;
+    opacity: 0.6;
+    animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0.2; }
 }
 </style>
 </head>
 
-<body onclick="startVideo()">
+<body>
 
-<!-- 🎬 影片 -->
-<video id="bgVideo" muted loop playsinline webkit-playsinline>
-    <source src="no.mp4" type="video/mp4">
-</video>
+<!-- 🎞 GIF 背景 -->
+<div class="bg"></div>
 
+<!-- 🌑 遮罩 -->
+<div class="overlay"></div>
+
+<!-- ⚠️ 文字 -->
 <div class="content">
     <h1>⚠️ 請勿觀看此內容</h1>
     <p>你未滿18歲，無法進入本站內容。</p>
-    <div class="tip">點擊畫面開始播放</div>
+    <div class="tip">系統已限制存取</div>
 </div>
-
-<script>
-function startVideo() {
-    const video = document.getElementById("bgVideo");
-    video.play();
-}
-</script>
 
 </body>
 </html>
