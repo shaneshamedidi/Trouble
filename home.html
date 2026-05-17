@@ -79,6 +79,9 @@
         <button onclick="notAdult()">被發現沒成年了</button>
     </div>
 <script>
+if (sessionStorage.getItem("allowed") !== "true") {
+    window.location.href = "index.html";
+}
 function enterAdult() {
     window.location.href = "Trouble22.html";
 }
