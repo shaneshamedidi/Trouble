@@ -1,55 +1,97 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
-    <title>年齡確認</title>
-    <style>
-        /* 🖼️ 封面圖片 */
-        .cover {
-            width: 450px;        /* 👈 原本300 → 放大 */
-            max-width: 90%;
-            display: block;
-            margin: 30px auto;
-            border-radius: 16px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-        }
-        
-        /* 🧠 標題變大 */
-        h1 {
-            font-size: 36px;     /* 👈 放大標題 */
-            margin-bottom: 20px;
-        }
-        
-        /* 🔘 按鈕變大 */
-        button {
-            padding: 14px 28px;  /* 👈 按鈕變大 */
-            font-size: 18px;     /* 👈 字變大 */
-            margin: 10px;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-    </style>
-    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>年齡確認</title>
+
+<style>
+
+/* 🌐 全頁置中核心 */
+body {
+    margin: 0;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;   /* 水平置中 */
+    align-items: center;       /* 垂直置中 */
+
+    flex-direction: column;    /* 直排 */
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #111, #333);
+    color: white;
+}
+
+/* 🧠 標題（變更大） */
+h1 {
+    font-size: 48px;   /* 👈 放大 */
+    margin-bottom: 20px;
+}
+
+/* 🖼️ 圖片（更大 + 更精緻） */
+.cover {
+    width: 600px;      /* 👈 放大 */
+    max-width: 90%;
+
+    border-radius: 18px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+
+    margin-bottom: 30px;
+}
+
+/* 🔘 按鈕（更大更像入口） */
+button {
+    padding: 16px 32px;
+    font-size: 20px;
+
+    margin: 10px;
+    border-radius: 12px;
+
+    cursor: pointer;
+    border: none;
+
+    transition: 0.2s;
+}
+
+/* ✨ hover效果 */
+button:hover {
+    transform: scale(1.05);
+}
+
+/* 👇 成年 / 未成年不同顏色 */
+button:first-of-type {
+    background: #4CAF50;
+    color: white;
+}
+
+button:last-of-type {
+    background: #e74c3c;
+    color: white;
+}
+
+</style>
 </head>
+
 <body>
 
-    <h1>你成年了嗎?</h1>
+    <h1>你成年了嗎？</h1>
 
-    <!-- 👇 新增圖片 -->
     <img src="confuse.jpg" alt="封面圖片" class="cover">
-    
+
     <button onclick="enterAdult()">我已成年</button>
     <button onclick="notAdult()">未滿18歲</button>
 
-    <script>
-        function enterAdult() {
-            window.location.href = "home.html";
-        }
+<script>
+function enterAdult() {
+    window.location.href = "home.html";
+}
 
-        function notAdult() {
-            window.location.href = "block.html";
-        }
-    </script>
+function notAdult() {
+    window.location.href = "block.html";
+}
+</script>
 
 </body>
 </html>
