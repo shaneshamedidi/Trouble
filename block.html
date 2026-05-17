@@ -10,12 +10,25 @@
             margin-top: 120px;
             color: red;
         }
+        .video {
+            width: 80%;
+            max-width: 600px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
     </style>
 </head>
 <body>
 
-    <h1>⚠️ 請勿觀看此內容</h1>
-    <p>你未滿18歲，無法進入本站內容。</p>
+    <!-- 👇 影片放這裡 -->
+<video controls class="video">
+    <source src="no.mp4" type="video/mp4">
+    你的瀏覽器不支援影片播放
+</video>
+
+<p>你未滿18歲，無法進入本站內容。</p>
 
 </body>
 </html>
