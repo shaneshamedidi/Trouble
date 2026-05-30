@@ -2,43 +2,69 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>首頁</title>
 
   <style>
     body {
       margin: 0;
       padding: 0;
+      font-family: Arial, sans-serif;
 
       background-image: url("image.jpg");
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
 
-      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
+
     nav {
-      background-color: rgba(0, 0, 0, 0.55);
-      padding: 20px;
-      width: fit-content;
-      margin: 20px;
-      border-radius: 12px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 25px;
+      border-radius: 16px;
+      width: 80%;
+      max-width: 320px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     }
+
+
     nav a {
       display: block;
       color: white;
       text-decoration: none;
       font-size: 18px;
+      padding: 12px;
       margin: 10px 0;
+      border-radius: 10px;
+      background-color: rgba(255, 255, 255, 0.1);
+      transition: 0.3s;
     }
 
     nav a:hover {
-      color: #00d9ff;
+      background-color: rgba(0, 217, 255, 0.3);
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        width: 90%;
+        padding: 20px;
+      }
+
+      nav a {
+        font-size: 16px;
+        padding: 14px;
+      }
     }
   </style>
 </head>
 
 <body>
-
   <h1>她真的很麻煩</h1>
 
 <nav>
