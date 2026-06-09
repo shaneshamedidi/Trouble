@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二十四章</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+
+            background-image: url("image.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+            color: #333;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 0;
+        }
+        body {
+            font-family: "標楷體", "DFKai-SB", serif;
+            /* font-family: "Noto Serif TC", serif; */
+        }
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 60px auto;
+            background: rgba(255, 255, 255, 0.92); 
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.8;
+            white-space: pre-line;
+        }
+        .top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: #555;
+            transition: 0.2s;
+        }
+        a:hover {
+            color: black;
+        }
+        .btn {
+            padding: 6px 12px;
+            background: #333;
+            color: white;
+            border-radius: 8px;
+        }
+        .btn:hover {
+            background: #000;
+        }
+
+        .prev-btn,
+        .next-btn {
+          position: fixed;
+          bottom: 16px;
+          z-index: 9999;
+        
+          padding: 12px 16px;
+        
+          background: rgba(0, 0, 0, 0.75);
+          color: white;
+        
+          font-size: 15px;
+          font-weight: bold;
+        
+          border-radius: 999px;
+          text-decoration: none;
+        
+          box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+          transition: 0.25s;
+        
+          display: flex;
+          align-items: center;
+          gap: 6px;
+        }
+        
+        .prev-btn {
+          left: 16px;
+        }
+
+        .prev-btn:hover,
+        .next-btn:hover {
+          background: rgba(0, 217, 255, 0.85);
+          transform: scale(1.05);
+        }
+        
+        @media (max-width: 600px) {
+          .prev-btn,
+          .next-btn {
+            font-size: 14px;
+            padding: 10px 14px;
+            bottom: 12px;
+          }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- <div class="top">
+            <a href="home.html">← 回首頁</a>
+            <a class="btn" href="home.html">首頁</a>
+        </div> -->
+
+        <h1>第二十四章</h1>
+
+        <p>
+
+
+——
+第二十四章 還沒好對不幾
+
+
+        </p>
+
+    </div>
+    <a class="prev-btn" href="trouble23.html">← 上一章</a>
+
+</body>
+    <!-- <script>
+    (function () {
+        if (sessionStorage.getItem("allowed") !== "true") {
+            window.location.href = "index.html";
+        }
+    })();
+</script> -->
+</html>
